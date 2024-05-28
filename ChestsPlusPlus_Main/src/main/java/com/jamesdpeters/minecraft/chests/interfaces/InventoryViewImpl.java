@@ -46,4 +46,16 @@ public class InventoryViewImpl extends InventoryView {
     public String getTitle() {
         return "ChestsPlusPlusInventoryView";
     }
+
+    @Override
+    public String getOriginalTitle() {
+        // TODO Auto-generated method stub
+        return "Inventory Chest";
+    }
+
+    @Override
+    public void setTitle(String title) {
+        // TODO Auto-generated method stub
+        // throw new UnsupportedOperationException("Unimplemented method 'setTitle'");
+    }
 }
