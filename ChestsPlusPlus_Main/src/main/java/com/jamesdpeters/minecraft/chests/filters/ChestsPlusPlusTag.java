@@ -55,7 +55,6 @@ public class ChestsPlusPlusTag {
     public static Tag HEAD; 
     public static Tag DIAMOND; 
     public static Tag MUSIC; 
-    public static Tag MOB DROP; 
     public static Tag GEMS; 
     public static Tag ENCHANTING; 
     public static Tag MAP; 
@@ -579,13 +578,13 @@ public class ChestsPlusPlusTag {
 
             @Override
             public boolean isTagged(@NotNull Keyed item) {
-                return item.equals(Material.BLAZE_POWDER || Material.BLAZE_ROD || Material.BONE || Material.BONE_BLOCK || Material.BREEZE_ROD || Material.COBWEB || Material.ENDER_EYE || Material.ENDER_PEARL || Material.FEATHER || Material.FERMENTED_SPIDER_EYE || Material.GHAST_TEAR || Material.GLOW_INK_SAC || Material.GUNPOWDER || Material.INK_SAC || Material.MAGMA_BLOCK || Material.MAGMA_CREAM || Material.NAUTILUS_SHELL || Material.NETHER_STAR || Material.PHANTOM_MEMBRANE || Material.PUFFERFISH || Material.ROTTEN_FLESH || Material.SPIDER_EYE || Material.STRING);
+                return item.equals(Material.BLAZE_POWDER || Material.BLAZE_ROD || Material.BONE || Material.BONE_BLOCK || Material.BREEZE_ROD || Material.COBWEB || Material.DRAGON_BREATH || Material.ENDER_EYE || Material.ENDER_PEARL || Material.FEATHER || Material.FERMENTED_SPIDER_EYE || Material.GHAST_TEAR || Material.GLOW_INK_SAC || Material.GUNPOWDER || Material.INK_SAC || Material.MAGMA_BLOCK || Material.MAGMA_CREAM || Material.NAUTILUS_SHELL || Material.NETHER_STAR || Material.PHANTOM_MEMBRANE || Material.PUFFERFISH || Material.ROTTEN_FLESH || Material.SPIDER_EYE || Material.STRING);
             }
 
             @NotNull
             @Override
             public Set<Material> getValues() {
-                return Sets.newHashSet(Material.BLAZE_POWDER, Material.BLAZE_ROD, Material.BONE, Material.BONE_BLOCK, Material.BREEZE_ROD, Material.COBWEB, Material.ENDER_EYE, Material.ENDER_PEARL, Material.FEATHER, Material.FERMENTED_SPIDER_EYE, Material.GHAST_TEAR, Material.GLOW_INK_SAC, Material.GUNPOWDER, Material.INK_SAC, Material.MAGMA_BLOCK, Material.MAGMA_CREAM, Material.NAUTILUS_SHELL, Material.NETHER_STAR, Material.PHANTOM_MEMBRANE, Material.PUFFERFISH, Material.ROTTEN_FLESH, Material.SPIDER_EYE, Material.STRING);
+                return Sets.newHashSet(Material.BLAZE_POWDER, Material.BLAZE_ROD, Material.BONE, Material.BONE_BLOCK, Material.BREEZE_ROD, Material.COBWEB, Material.DRAGON_BREATH, Material.ENDER_EYE, Material.ENDER_PEARL, Material.FEATHER, Material.FERMENTED_SPIDER_EYE, Material.GHAST_TEAR, Material.GLOW_INK_SAC, Material.GUNPOWDER, Material.INK_SAC, Material.MAGMA_BLOCK, Material.MAGMA_CREAM, Material.NAUTILUS_SHELL, Material.NETHER_STAR, Material.PHANTOM_MEMBRANE, Material.PUFFERFISH, Material.ROTTEN_FLESH, Material.SPIDER_EYE, Material.STRING);
             }
 
             @NotNull
@@ -912,26 +911,6 @@ public class ChestsPlusPlusTag {
             @Override
             public NamespacedKey getKey() {
                 return new NamespacedKey(ChestsPlusPlus.PLUGIN, music);
-            }
-        };
-    
-        MOB DROP = new Tag() {
-
-            @Override
-            public boolean isTagged(@NotNull Keyed item) {
-                return item.equals(Material.DRAGON_BREATH);
-            }
-
-            @NotNull
-            @Override
-            public Set<Material> getValues() {
-                return Sets.newHashSet(Material.DRAGON_BREATH);
-            }
-
-            @NotNull
-            @Override
-            public NamespacedKey getKey() {
-                return new NamespacedKey(ChestsPlusPlus.PLUGIN, mob drop);
             }
         };
     

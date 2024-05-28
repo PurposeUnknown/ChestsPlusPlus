@@ -55,7 +55,6 @@ public class ItemTypeUtil {
         tags.add(ChestsPlusPlusTag.HEAD); 
         tags.add(ChestsPlusPlusTag.DIAMOND); 
         tags.add(ChestsPlusPlusTag.MUSIC); 
-        tags.add(ChestsPlusPlusTag.MOB DROP); 
         tags.add(ChestsPlusPlusTag.GEMS); 
         tags.add(ChestsPlusPlusTag.ENCHANTING); 
         tags.add(ChestsPlusPlusTag.MAP); 
