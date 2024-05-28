@@ -32,13 +32,13 @@ def read_materials(csv_path):
 
 def generate_section(category_name, materials):
 
-    tag_string = "return item.equals("
+    tag_string = "return "
     or_sequence = " || "
     for item in materials[category_name]:
-        tag_string += "Material." + item + or_sequence
+        tag_string += "item.equals(Material." + item + ")" + or_sequence
     tag_string.split(or_sequence)
     tag_string = tag_string[:-len(or_sequence)]
-    tag_string += ");"
+    tag_string += ";"
 
     values_string = "return Sets.newHashSet("
     or_sequence = ", "
@@ -67,7 +67,7 @@ def generate_section(category_name, materials):
             @NotNull
             @Override
             public NamespacedKey getKey() {{
-                return new NamespacedKey(ChestsPlusPlus.PLUGIN, {namespaced_key});
+                return new NamespacedKey(ChestsPlusPlus.PLUGIN, "{namespaced_key}");
             }}
         }};
     """.format(category_name=category_name, tag_string=tag_string, values_string=values_string, namespaced_key=namespaced_key)
