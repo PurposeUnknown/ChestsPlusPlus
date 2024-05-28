@@ -38,7 +38,7 @@ def generate_section(category_name, materials):
         tag_string += "Material." + item + or_sequence
     tag_string.split(or_sequence)
     tag_string = tag_string[:-len(or_sequence)]
-    tag_string += ")"
+    tag_string += ");"
 
     values_string = "return Sets.newHashSet("
     or_sequence = ", "
@@ -46,7 +46,7 @@ def generate_section(category_name, materials):
         values_string += "Material." + item + or_sequence
     values_string.split(or_sequence)
     values_string = values_string[:-len(or_sequence)]
-    values_string += ")"
+    values_string += ");"
 
     namespaced_key = category_name.lower()
 
