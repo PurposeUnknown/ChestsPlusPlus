@@ -78,6 +78,13 @@ public class ChestsPlusPlusTag {
 
             @Override
             public boolean isTagged(@NotNull Keyed item) {
+                System.out.println("LUCIA: Logs Below");
+                System.out.println("isTagged");
+                System.out.println(item.getClass());
+                System.out.println(item.getKey());
+                System.out.println(item.equals(Material.WHEAT_SEEDS));
+                System.out.println(Material.WHEAT_SEEDS);
+                System.out.println("LUCIA: Logs End");
                 return item.equals(Material.WHEAT_SEEDS) || item.equals(Material.PUMPKIN_SEEDS) || item.equals(Material.MELON_SEEDS) || item.equals(Material.BEETROOT_SEEDS);
             }
 
